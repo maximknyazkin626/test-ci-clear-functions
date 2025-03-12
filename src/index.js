@@ -1,4 +1,4 @@
-function checkHealth(person) {
+export const checkHealth = (person) => {
   if (person.health > 50) {
     return "healthy";
   } else if (person.health < 50 && person.health > 15) {
@@ -6,6 +6,4 @@ function checkHealth(person) {
   } else if (person.health < 15) {
     return "critical";
   }
-}
-
-module.exports = { checkHealth };
+};

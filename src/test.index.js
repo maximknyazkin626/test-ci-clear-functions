@@ -1,7 +1,7 @@
-const checkHealth = require("index.js");
+import { checkHealth } from "../src/index.js";
 
-test('checkHealth test', () => {
-  expect(checkHealth(60)).toBe("healthy");
-  expect(checkHealth(35)).toBe("wounded");
-  expect(checkHealth(10)).toBe("critical");
+test("checkHealth test", () => {
+  expect(checkHealth({ name: "Маг", health: 90 })).toBe("healthy");
+  expect(checkHealth({ name: "Маг", health: 20 })).toBe("wounded");
+  expect(checkHealth({ name: "Маг", health: 10 })).toBe("critical");
 });
